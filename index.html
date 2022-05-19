@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Резюме</title>
+        <link rel="shortcut icon" href="/" type="image/png"/>
+        <meta name="description" content="Резюме"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="HandheldFriendly" content="true"/>
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        <!-- MyStyle -->
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+    <section class="resume-wrapper">
+        <div class="resume-header">
+            <h1>Дмитрий Сарыков</h1>
+            <h2>Веб-разработчик</h2>
+            <ul>
+                <li>Программирование</li>
+                <li>Дизайн</li>
+                <li>Верстка</li>
+                <li>Иллюстрация</li>
+                <li>Фирменный стиль</li>
+            </ul>
+        </div>
+        <div class="resume-photo">
+            <img src="images/my_photo.jpg">
+        </div>
+        <div class="resume-about">
+            <h3 class="collapse-link"><i class="fas fa-user"></i> Основная информация</h3>
+            <ul class="collapse">
+                <li>Возраст: 22 года</li>
+                <li><i class="fas fa-envelope"></i>example@mail.ru</li>
+                <li><i class="fas fa-phone"></i>+7 123 456 78 90</li>
+                <li><i class="fas fa-map-marker-alt"></i>Нижний Новгород</li>
+            </ul> 
+        </div>
+        <div class="resume-skills">
+            <h3 class="collapse-link"><i class="fas fa-compass"></i>Ключевые навыки</h3>
+            <ul class="skills collapse">
+                <li><img class="skill-img" src="images/illustrator.png" alt="Adobe Illustrator"></li>
+                <li><img class="skill-img" src="images/photoshop.png" alt="Adobe Photoshop"></li>
+                <li><img class="skill-img" src="images/figma.png" alt="Figma"></li>
+                <li><img class="skill-img" src="images/miro.png" alt="Miro"></li>
+                <li><img class="skill-img" src="images/html.png" alt="HTML"></li>
+                <li><img class="skill-img" src="images/css.png" alt="CSS"></li>
+                <li><img class="skill-img" src="images/javascript.png" alt="JavaScript"></li>
+                <li><img class="skill-img" src="images/sass.png" alt="SCSS"></li>
+                <li><img class="skill-img" src="images/python.png" alt="Python"></li>
+                <li><img class="skill-img" src="images/django.jpg" alt="Django"></li>
+                <li><img class="skill-img" src="images/c-sharp.png" alt="C#"></li>
+                <li><img class="skill-img" src="images/unity.png" alt="Unity"></li>
+            </ul> 
+            <ul class="skills-text">
+                <li>Разработка информационных систем</li>
+                <li>Дизайн и верстка сайтов</li>
+                <li>Анализ и разработка макета</li>
+                <li>Знания UI/UX</li>
+                <li>Языки - русский, английский</li>
+            </ul>
+        </div>
+        <div class="resume-info">
+            <h3 class="collapse-link"><i class="fas fa-briefcase"></i>Место работы</h3>
+            <ul class="info-list collapse">
+                <li>Медицинский центр ООО "Визит"</li>
+                <li>Должность: Системный администратор</li>
+                <li>Период: 1 год</li>
+            </ul> 
+            <h3 class="collapse-link"><i class="fas fa-graduation-cap"></i>Образование</h3>
+            <ul class="info-list collapse">
+                <li>2016-2020 - Техникум транспорта и информационных технологий</li>
+            </ul>  
+            <h3 class="collapse-link"><i class="fas fa-volleyball-ball"></i>Увлечения</h3>
+            <ul class="info-list list collapse">
+                <li>Веб-разработка</li>
+                <li>Графический дизайн</li>
+                <li>Видео</li>
+                <li>Фотография</li>
+                <li>Музыка</li>
+                <li>Чтение</li>
+                <li>Путешествия</li>
+                <li>Активный отдых</li>
+            </ul>
+        </div>
+    </section>
+    <script>
+        var coll = document.getElementsByClassName("collapse-link");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", collapse);
+        }
+        function collapse(e){
+            let list = e.target.nextElementSibling;
+            if (list.classList.contains("hide")) {
+                list.classList.remove("hide");
+            } else {
+                list.classList.add("hide");
+            }
+        }
+    </script>
+    </body>
+</html>
